@@ -9,18 +9,19 @@ public:
         }
 
         vector<int> dist(n,INT_MAX);
-       // priority_queue<pair<int,int>,vector<pair<int,int>>,greater<pair<int,int>>> pq;
-       queue<pair<int,pair<int,int>>> pq;
+        priority_queue<pair<int,pair<int,int>>,vector<pair<int,pair<int,int>>>,greater<pair<int,pair<int,int>>>> pq;
+      // queue<pair<int,pair<int,int>>> pq;
         pq.push({0,{0,src}});
 
         while(!pq.empty()){
-        auto val=pq.front();
+        auto val=pq.top();
         int step=val.first;
         int cost=val.second.first;
         int curr=val.second.second;
         pq.pop();
       //  if(step<=k && curr==dst)return cost;
         if(step>k)continue;
+      //  if(curr==dst)return cost;
         for(auto it:adj[curr]){
             if(cost+it.second<dist[it.first]){
 
