@@ -20,9 +20,9 @@ public:
         int curr=val.second.second;
         pq.pop();
       //  if(step<=k && curr==dst)return cost;
-     //   if(step>k)continue;
+        if(step>k)continue;
         for(auto it:adj[curr]){
-            if(step<=k && cost+it.second<dist[it.first]){
+            if(cost+it.second<dist[it.first]){
 
             dist[it.first]=cost+it.second;
                 pq.push({step+1,{it.second+cost,it.first}});
