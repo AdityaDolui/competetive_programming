@@ -56,7 +56,7 @@ public:
         }
        */
        if(idx!=-1){
-        dp[idx].first = max(dp[idx].first, dp[i - 1].first + 1);
+        dp[idx] = {max(dp[idx].first, dp[i - 1].first + 1),pre[idx] - pre[i - 1]};
                 if (dp[idx].first == dp[i - 1].first + 1) {
                     dp[idx].second = min(dp[idx].second, pre[idx] - pre[i - 1]);
                 }
