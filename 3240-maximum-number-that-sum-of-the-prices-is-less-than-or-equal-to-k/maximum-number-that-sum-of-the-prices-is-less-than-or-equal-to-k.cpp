@@ -36,7 +36,7 @@ public:
             mid=(high - low) / 2 + low;
             ll cnt=value(mid,x);
             if(cnt<=k){
-                ans=cnt;
+               // ans=cnt;
                 low=mid+1;
             }else high=mid-1;
         }
