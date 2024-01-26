@@ -8,9 +8,7 @@ public:
             adj[edges[i][1]].push_back({succProb[i],edges[i][0]});
 
         }
-    for(auto it:adj){
-        for(auto iit :it)cout<<iit.first<<" ";
-    }
+  
         vector<double> dist (n,DBL_MIN);
         vector<bool> vis(n,false);
         priority_queue<pair<double,int>> pq;
@@ -23,16 +21,17 @@ public:
             pq.pop();
             double d=it.first;
             int curr=it.second;
+            if(curr==end_node)return d;
            // if(i==end_node)return it.second;
            if(vis[curr])continue;
-           cout<<"HI"<<curr<<" ";
+          
                 vis[curr]=true;
                 for(auto ii:adj[curr]){
                     int next=ii.second;
                     double nextDist=ii.first;
-                    cout<<next<<"-"<<next;
+                   
                     if(dist[next]<dist[curr]*nextDist){
-                        cout<<"yes"<<" ";
+                       
                         dist[next]=dist[curr]*nextDist;
                         pq.push({dist[next],next});
                     }
