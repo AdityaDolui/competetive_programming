@@ -9,16 +9,16 @@ public:
         if(dp[i][j][move]!=-1)return dp[i][j][move];
         c++;
         maxi=max(c,maxi);
-        
+       
         double cnt=0;
         for(int k=0;k<8;k++)cnt+=f(i+dx[k],j+dy[k],move-1,n,c,dp);
         return dp[i][j][move]=cnt;
     }
     double knightProbability(int n, int k, int row, int column) {
         vector<vector<vector<double>>> dp(n,vector<vector<double>>(n,vector<double>(k+1,-1)));
-        double dig=f(row,column,k,n,0,dp);
         
-        double ans=dig/pow(8,maxi);;
+        
+        double ans=f(row,column,k,n,0,dp)/pow(8,maxi);;
         return ans;
     }
 };
