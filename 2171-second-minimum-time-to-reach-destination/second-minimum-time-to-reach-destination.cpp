@@ -28,8 +28,7 @@ public:
         int k=dist/change;
         if((k%2)==1)dist+=(change-(dist%change));
           
-         //  if(vis[curr])continue;
-           //vis[curr]=1;
+           
 
            for(auto it: adj[curr]){
                int nextDist=dist+time;
