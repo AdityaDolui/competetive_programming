@@ -18,22 +18,22 @@ int binary( vector<int> & arr,int tar){
 }
 
     vector<int> platesBetweenCandles(string s, vector<vector<int>>& queries) {
-        vector<pair<int,int>>  candle;
+        //vector<pair<int,int>>  candle;
         
 
         int cnt=0;
         vector<int> cnd;
-
+         unordered_map<int,int> map;
         for(int i=0;i<s.size();i++){
             if(s[i]=='|'){
                 cnd.push_back(i);
-            candle.push_back({i,cnt});
+                map[i]=cnt;
             }
             else cnt++;
         }
 
-        unordered_map<int,int> map;
-        for(auto it:candle)map[it.first]=it.second;
+       
+       // for(auto it:candle)map[it.first]=it.second;
         //for(auto it: candle)cout<<it.first<<" "<<it.second<<endl;
 
         vector<int> ans;
@@ -48,8 +48,8 @@ int binary( vector<int> & arr,int tar){
             
 
             int num2=binary(cnd,it[1]);
-            cout<<num2<<" "<<cnd[num]<<endl;
-            if(num==candle.size() || num2==-1|| cnd[num]>=num2)ans.push_back(0);
+          //  cout<<num2<<" "<<cnd[num]<<endl;
+            if(num==cnd.size() || num2==-1|| cnd[num]>=num2)ans.push_back(0);
             else ans.push_back(map[num2]-map[cnd[num]]);
 
         }
