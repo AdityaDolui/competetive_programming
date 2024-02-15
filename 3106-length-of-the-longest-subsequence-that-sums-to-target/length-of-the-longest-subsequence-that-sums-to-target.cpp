@@ -5,7 +5,7 @@ int f(int i,int target,vector<int>& nums,vector<vector<int>> &dp){
     
     if(target==0){
         flag=false;
-        cout<<"yes ";
+        //cout<<"yes ";
         return 0;
     }
     if(i<0)return -1e9;
