@@ -1,6 +1,6 @@
 class Solution {
 public:
-    int f(int k,vector<vector<int>> & piles,vector<vector<int>> &dp,int ind=0){
+    int f(int k,vector<vector<int>> & piles,vector<vector<int>> &dp,int ind){
             if(ind>=piles.size()||k<=0)return 0;
             if(dp[ind][k]!=-1)return dp[ind][k];
            int total=0;
@@ -18,7 +18,7 @@ public:
 
        
        vector<vector<int>> dp(piles.size(),vector<int>(k+1,-1));
-        return f(k,piles,dp);
+        return f(k,piles,dp,0);
 
     }
 };
