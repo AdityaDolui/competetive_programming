@@ -5,7 +5,7 @@ public:
        // for(auto it: tasks)cout<<it<<" ";
         sort(processorTime.begin(),processorTime.end());
         int ans=0;
-        for(int i=0;i<tasks.size();i++){
+        for(int i=0;i<tasks.size();i+=4){
             int num=i/4;
             ans=max(ans,processorTime[num]+tasks[i]);
         }
