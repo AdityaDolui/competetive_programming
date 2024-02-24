@@ -15,7 +15,7 @@ public:
          for(auto it :map1){
             int a=abs(it.second-map2[it.first]);
             if(a&1){
-                cout<<"1st ";
+             //   cout<<"1st ";
                 return -1;}
 
             if(it.second>map2[it.first])
@@ -27,7 +27,7 @@ public:
         for(auto it :map2){
             int a=abs(it.second-map1[it.first]);
             if(a&1){
-                 cout<<"2nd ";
+               //  cout<<"2nd ";
                  return -1;}
 
             if(it.second>map1[it.first])
@@ -41,9 +41,8 @@ public:
        sort(v1.begin(),v1.end());
         sort(v2.begin(),v2.end());
 
-        long long ans=0;
-    
-    int i=0;
+        
+
     
       long minCost=0;
         for(int i=0;i<v1.size();i++)
@@ -55,7 +54,7 @@ public:
         return minCost;
 
     
-    cout<<"last";
+   // cout<<"last";
     
 
     }
