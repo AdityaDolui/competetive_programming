@@ -36,7 +36,7 @@ public:
                 v2.push_back(it.first);
                 num2+=a;} 
         }
-       if(num1!=num2)return -1;
+    //   if(num1!=num2)return -1;
 
        sort(v1.begin(),v1.end());
         sort(v2.begin(),v2.end());
