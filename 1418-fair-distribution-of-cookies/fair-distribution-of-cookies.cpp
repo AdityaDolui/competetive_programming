@@ -16,8 +16,8 @@ public:
    }
     int distributeCookies(vector<int>& cookies, int k) {
         ans = INT_MAX;
-        vector<int> buckets(k, 0);
-        backtrack(0, cookies, buckets);
+        vector<int> v(k, 0);
+        backtrack(0, cookies, v);
         return ans;
     }
 };
