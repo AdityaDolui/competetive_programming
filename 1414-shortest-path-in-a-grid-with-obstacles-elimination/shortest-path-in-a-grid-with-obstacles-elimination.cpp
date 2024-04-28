@@ -3,6 +3,9 @@ public:
     int f(int i,int j,int k,vector<vector<bool>> &vis, vector<vector<int>>& grid,vector<vector<vector<int>>>& dp){
           int n = grid.size();
         int m = grid[0].size();
+        if(i==0 && j==0){
+            return dp[i][j][k]=0;
+        }
 
         if(i<0 || i>=n ||j<0 || j>=m||vis[i][j]){
           //  cout<<"out"<<" ";
@@ -11,9 +14,7 @@ public:
             if(dp[i][j][k]!=-1)return dp[i][j][k];
 
         
-         if(i==0 && j==0){
-            return dp[i][j][k]=0;
-        }
+         
 
         if(grid[i][j]==1){
             if(k<=0)return dp[i][j][k]= 1e9;
@@ -24,10 +25,13 @@ public:
 
         
         vis[i][j]=1;
-      
+        
+       int r=1+f(i,j+1,k,vis,grid,dp);
+       
         int u=1+f(i-1,j,k,vis,grid,dp);
-        int l=1+f(i,j-1,k,vis,grid,dp);
-        int r=1+f(i,j+1,k,vis,grid,dp);
+         int l=1+f(i,j-1,k,vis,grid,dp);
+       
+       
         
         int d=1+f(i+1,j,k,vis,grid,dp);
 
