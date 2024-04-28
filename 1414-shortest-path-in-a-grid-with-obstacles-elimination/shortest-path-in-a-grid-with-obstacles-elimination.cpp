@@ -7,7 +7,8 @@ public:
 
         if(i<0 || i>=n ||j<0 || j>=m||vis[i][j]){
           //  cout<<"out"<<" ";
-            return 1e9;}
+            return 1e9;
+            }
 
             if(dp[i][j][k]!=-1)return dp[i][j][k];
 
