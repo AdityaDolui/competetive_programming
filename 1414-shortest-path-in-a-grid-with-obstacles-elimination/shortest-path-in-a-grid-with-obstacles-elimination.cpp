@@ -1,7 +1,7 @@
 
      class Solution {
 public:
-    int f(int i,int j,int k,vector<vector<bool>> &vis, vector<vector<int>>& grid,vector<vector<vector<int>>>& dp){
+    int f(int i,int j,int k,vector<vector<int>> &vis, vector<vector<int>>& grid,vector<vector<vector<int>>>& dp){
           int n = grid.size();
         int m = grid[0].size();
 
@@ -42,7 +42,7 @@ public:
         int n=grid.size();
         int m=grid[0].size();
         vector<vector<vector<int>>> dp(n,vector<vector<int>>(m,vector<int>(k+1,-1)));
-        vector<vector<bool>> vis(n,vector<bool>(m,0));
+        vector<vector<int>> vis(n,vector<int>(m,0));
         int ans= f(n-1,m-1,k,vis,grid,dp);
         if(ans>=1e9)return -1;
         else return ans;
