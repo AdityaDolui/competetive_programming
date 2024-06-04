@@ -9,15 +9,10 @@ int count (vector<int>& arr){
         }
         else{
             int i=lower_bound(ans.begin(),ans.end(),it)-ans.begin();
-            // if(i==ans.size()){cout<<it<<"-";
-            // i--;}
-            
             ans[i]=it;
         }
     }
-    for(auto it : arr)cout<<it<<" ";
-    cout<<endl;
-    for(auto it : ans)cout<<it<<" ";
+   
     return ans.size();
 }
     int minOperations(vector<int>& target, vector<int>& arr) {
