@@ -8,10 +8,10 @@ int count (vector<int>& arr){
             ans.push_back(it);
         }
         else{
-            auto i=lower_bound(ans.begin(),ans.end(),it);
-            if(i==ans.end())i--;
-            int ind=i-ans.begin();
-            ans[ind]=it;
+            int i=lower_bound(ans.begin(),ans.end(),it)-ans.begin();
+            if(i==ans.size())i--;
+            
+            ans[i]=it;
         }
     }
     return ans.size();
