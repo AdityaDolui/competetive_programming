@@ -33,7 +33,7 @@ public:
                  q.push_back(second);
                  q.push_front(first);
             }
-            cout<<i<<" ";
+          //  cout<<i<<" ";
             i++;
 }
 return -1;
