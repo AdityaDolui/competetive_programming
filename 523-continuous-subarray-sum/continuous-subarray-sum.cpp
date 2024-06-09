@@ -7,17 +7,17 @@ public:
         if(n==1 && nums[0]==0)return false;
         
         int sum=0;
-       map[0]=0;
+       map[0]=-1;
         for(int i=0;i<n;i++){
             sum+=nums[i];
             int rem=sum%k;
             
              if(map.find(rem)==map.end()){
-                 map[rem]=i+1;
+                 map[rem]=i;
              }
 
            else{
-                if(map[rem]<i)
+                if(map[rem]<i-1)
                 return true;
             }
             
