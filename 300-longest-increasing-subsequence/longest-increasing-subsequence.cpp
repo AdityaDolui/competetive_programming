@@ -9,7 +9,7 @@ public:
             }
             else{
                 int it= lower_bound(arr.begin(),arr.end(),nums[i])-arr.begin();
-                if(it==arr.size())it--;
+                //if(it==arr.size())it--;
                 arr[it]=nums[i];
             }
         }
