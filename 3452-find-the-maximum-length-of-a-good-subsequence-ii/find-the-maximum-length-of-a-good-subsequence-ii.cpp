@@ -6,10 +6,10 @@ public:
         int n=nums.size();
         vector<vector<int>> dp(nums.size(),vector<int>(k+1,0));
         vector<int> longest_sub(k+1,0);
-        dp[0][0]=1;
-        last_seen[nums[0]]=0;
-        longest_sub[0]=1;
-        for(int i=1;i<n;i++){
+       // dp[0][0]=1;
+      //  last_seen[nums[0]]=0;
+       // longest_sub[0]=1;
+        for(int i=0;i<n;i++){
             dp[i][0]=1;
             int maxi=min(i,k);
             if(last_seen.find(nums[i])!=last_seen.end()){
