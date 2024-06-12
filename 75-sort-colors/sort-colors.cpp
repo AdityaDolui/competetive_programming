@@ -4,7 +4,7 @@ public:
         vector<int> ans(nums.size(),1);
         int i=0,j=nums.size()-1,k=0;
        while(k<=j){
-        cout<<k<<" ";
+      // cout<<k<<" ";
         if(nums[k]==2){
             swap(nums[k],nums[j]);
             j--;
