@@ -3,7 +3,7 @@ public:
       int N ;
       vector<long long> bit;
     void update(int i,int val){
-        for(;i<N && i!=0;i+=(i&-i)){
+        for(;i<N;i+=(i&-i)){
             bit[i]+=val;
         }
     }
@@ -21,16 +21,16 @@ public:
         bit.assign(N,0);
 
         for(int i=0;i<nums.size();i++){
-            global+=sum(N-1)-sum(nums[i]);
-            update(nums[i],1);
+            global+=sum(N-1)-sum(nums[i]+1);
+            update(nums[i]+1,1);
         }
         long long local=0;
 
         for(int i=1;i<nums.size();i++){
-            if(nums[i-1]>nums[i]){cout<<"hello";
+            if(nums[i-1]>nums[i]){
             local++;}
         }
-        cout<<global<<"  "<<local;
+       
         return (local==global);
     }
 };
