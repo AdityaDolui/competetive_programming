@@ -3,12 +3,14 @@ public:
 bool check(vector<int>& position, int m,int ans){
     int prev=position[0];
     m--;
-    for(int i=1;i<position.size();i++){
-     if(position[i]-prev>=ans){
-        m--;
-        prev=position[i];
-}
-if(!m)return true;
+    int i=1;
+    while(i<position.size()){
+        int it=lower_bound(position.begin()+i,position.end(),prev+ans)-position.begin();
+        if(it!=position.size()){
+            prev=position[it];
+            m--;
+            if(!m)return true;
+        }else break;
     }
 return false;
 }
