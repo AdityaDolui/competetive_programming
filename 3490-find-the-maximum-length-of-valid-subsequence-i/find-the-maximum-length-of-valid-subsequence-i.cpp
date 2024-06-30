@@ -17,7 +17,7 @@ public:
         int cnt=0,cnt2=0;
         
         int maxi=max(f(0,0,nums,0),f(0,1,nums,0));
-          cout<<maxi;
+         // cout<<maxi;
         for(int i=0;i<n;i++){
             if(nums[i]&1)cnt++;
             else cnt2++;
