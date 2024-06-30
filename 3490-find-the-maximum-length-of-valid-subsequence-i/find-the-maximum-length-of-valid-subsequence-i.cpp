@@ -14,8 +14,6 @@ public:
     }
     int maximumLength(vector<int>& nums) {
         int n=nums.size();
-       vector<int> arr;
-        vector<vector<int>> dp(n,vector<int>(2,-1));
         int cnt=0,cnt2=0;
         
         int maxi=max(f(0,0,nums,0),f(0,1,nums,0));
