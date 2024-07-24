@@ -11,7 +11,6 @@ public:
             num/=10;
             i*=10;
         }
-        cout<<ans<<"  ";
         return ans;
     }
     vector<int> sortJumbled(vector<int>& mapping, vector<int>& nums) {
