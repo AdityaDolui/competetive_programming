@@ -56,9 +56,8 @@ int dy[4]={1,-1,0,0};
             }
 
         }
-        cout<<"helllo";
-        if(dist[n-1][m-1]==INT_MAX)
+       
         return -1;
-        return dist[n-1][m-1];
+      
     }
 };
