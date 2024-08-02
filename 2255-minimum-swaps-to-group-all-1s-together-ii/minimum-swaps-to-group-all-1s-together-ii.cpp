@@ -9,10 +9,9 @@ public:
         for(int i=0;i<window;i++){
             if(nums[i]&1)curr++;
         }
-       int ans=window-curr;
-        if(!ans)return 0;
+        int ans=window-curr;
+        if(curr==window)return 0;
         int  j=(window)%n;
-         
 
         for(int i=1;i<n;i++){
            
