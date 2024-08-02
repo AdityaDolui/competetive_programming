@@ -20,7 +20,7 @@ public:
             if(nums[j++]&1)curr++;
 
             ans=min(ans,(window-curr));
-            
+            if(!ans)return ans;
         }
         return ans;
     }
