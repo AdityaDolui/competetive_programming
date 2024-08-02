@@ -6,7 +6,6 @@ public:
         int n=nums.size();
         if(window==n)return 0;
         int curr=0;
-        cout<<window<<" ";
         for(int i=0;i<window;i++){
             if(nums[i]&1)curr++;
         }
@@ -21,7 +20,7 @@ public:
             if(nums[j++]&1)curr++;
 
             ans=min(ans,(window-curr));
-            cout<<curr<<" ";
+            
         }
         return ans;
     }
