@@ -2,6 +2,7 @@ class Solution {
 public:
     bool canBeEqual(vector<int>& target, vector<int>& arr) {
         unordered_map<int,int> map;
+        
         for(auto it:target)map[it]++;
 
         for(auto it:arr){
