@@ -14,7 +14,6 @@ int mod=1e9+7;
             }
         }
         sort(arr.begin(),arr.end());
-      //  for(auto it:arr)cout<<it<<" ";
         for(int i=left-1;i<right;i++){
             ans=(ans%mod+(arr[i]))%mod;
         }
