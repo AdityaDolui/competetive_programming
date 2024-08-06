@@ -11,7 +11,7 @@ public:
         int i=0;
         int ans=0;
         int div=0;
-        while(i<26 && arr[i]!=0){
+        while(i<26){
         
         if(k)div=k/8;
             ans+=arr[i]*(div+1);
