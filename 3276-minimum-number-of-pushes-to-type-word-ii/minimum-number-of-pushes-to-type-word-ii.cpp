@@ -7,14 +7,13 @@ public:
         }
         sort(arr.begin(),arr.end(),greater<int>());
 
-        int k=0;
+        int k=8;
         int i=0;
         int ans=0;
         int div=0;
         while(i<26){
-        
-        if(k)div=k/8;
-            ans+=arr[i]*(div+1);
+            div=k/8;
+            ans+=arr[i]*div;
             i++;
             k++;
         }
