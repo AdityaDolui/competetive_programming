@@ -14,18 +14,6 @@ int dy[4]={0,0,-1,1};
         }
 
      }
-      void f1(int i,int j,vector<vector<int>>& grid,vector<vector<int>> &vis ){
-         vis[i][j]=1;
-
-        for(int k=0;k<4;k++){
-            int x=i+dx[k];
-            int y=j+dy[k];
-            if(x>=0 && x<grid.size() && y>=0 && y<grid[0].size() && !vis[x][y] && grid[x][y]){
-                f(x,y,grid,vis);
-            }
-        }
-
-     }
      int check(vector<vector<int>>& grid){
         int n=grid.size();
         int m=grid[0].size();
@@ -34,7 +22,7 @@ int dy[4]={0,0,-1,1};
         for(int i=0;i<n;i++){
             for(int j=0;j<m;j++){
                 if(grid[i][j]&&!vis[i][j]){
-                    f1(i,j,grid,vis);
+                    f(i,j,grid,vis);
                     cnt++;
                     if(cnt>1)return 2;
                 }
