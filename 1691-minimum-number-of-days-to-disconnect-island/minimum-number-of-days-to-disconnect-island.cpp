@@ -28,6 +28,7 @@ int dy[4]={0,0,-1,1};
                 }
             }
         }
+        if(!cnt)return 2;
         return 1;
      }
     int minDays(vector<vector<int>>& grid) {
@@ -48,7 +49,7 @@ int dy[4]={0,0,-1,1};
             }
             }
         }
-        if(cal==1 || cal==0)return cal;
+      if(!cnt)return 0;
     int ans=0;
           for(int i=0;i<n;i++){
             for(int j=0;j<m;j++){
