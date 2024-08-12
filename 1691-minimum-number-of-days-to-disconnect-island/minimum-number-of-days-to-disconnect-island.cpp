@@ -39,16 +39,15 @@ int dy[4]={0,0,-1,1};
     int cal=0;
         for(int i=0;i<n;i++){
             for(int j=0;j<m;j++){
-                if(grid[i][j]){
-                    cal++;
-                if(!vis[i][j]){
+            
+                if(grid[i][j] && !vis[i][j]){
                     f(i,j,grid,vis);
                     cnt++;
                     if(cnt>1)return 0;
                 }
             }
             }
-        }
+        
       if(!cnt)return 0;
     int ans=0;
           for(int i=0;i<n;i++){
