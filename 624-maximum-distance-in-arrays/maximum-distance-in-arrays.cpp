@@ -1,25 +1,34 @@
 class Solution {
 public:
     int maxDistance(vector<vector<int>>& arrays) {
-        vector<pair<int,int>> maxEl, minEl;
+        pair<int,int> maxi={INT_MIN,-1}, secondMaxi={INT_MIN,-1};
+        pair<int,int> mini={INT_MAX,-1},secondMini={INT_MAX,-1};
         int i=0;
         for(auto it :arrays){
-            int mini=*min_element(it.begin(),it.end());
-            int maxi=*max_element(it.begin(),it.end());
-            maxEl.push_back({maxi,i});
-            minEl.push_back({mini,i});
+            int mn=*min_element(it.begin(),it.end());
+            int mx=*max_element(it.begin(),it.end());
+            
+           if(mn<mini.first){
+             secondMini=mini;
+            mini={mn,i};
+           
+           }else if(mn<secondMini.first){
+            secondMini={mn,i};
+           }
+           if(mx>maxi.first){
+            secondMaxi=maxi;
+            maxi={mx,i};
+           }else if(mx>secondMaxi.first){
+            secondMaxi={mx,-1};
+           }
             i++;
         }
 
-        sort(maxEl.begin(),maxEl.end());
-        sort(minEl.begin(),minEl.end());
-
         int ans=0;
-        int m=maxEl.size();
-        if(maxEl[m-1].second!=minEl[0].second){
-            return maxEl[m-1].first-minEl[0].first;
+        if(maxi.second!=mini.second){
+            return maxi.first-mini.first;
         }
-        return max((maxEl[m-1].first-minEl[1].first),(maxEl[m-2].first-minEl[0].first));
+        return max((maxi.first-secondMini.first),(secondMaxi.first-mini.first));
 
     }
 };
