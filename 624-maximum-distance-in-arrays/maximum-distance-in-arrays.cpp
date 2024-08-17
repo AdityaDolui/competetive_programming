@@ -5,8 +5,8 @@ public:
         pair<int,int> mini={INT_MAX,-1},secondMini={INT_MAX,-1};
         int i=0;
         for(auto it :arrays){
-            int mn=*min_element(it.begin(),it.end());
-            int mx=*max_element(it.begin(),it.end());
+            int mn=it[0];
+            int mx=it[it.size()-1];
             
            if(mn<mini.first){
              secondMini=mini;
