@@ -6,7 +6,7 @@ public:
         int i=0;
         for(auto it :arrays){
             int mn=it[0];
-            int mx=it[it.size()-1];
+            int mx=it.back();
             
            if(mn<mini.first){
              secondMini=mini;
