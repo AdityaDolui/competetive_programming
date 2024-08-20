@@ -12,10 +12,9 @@ public:
         }
         return dp[i][M][chance]=ans;
     }else{
-       // int sum=0;
+     
         int ans=INT_MAX;
         for(int k=1;k<=2*M && k+i<=piles.size();k++){
-            //sum+=piles[i+k-1];
             ans=min(ans,f(i+k,max(k,M),1,piles,dp));
         }
         return  dp[i][M][chance]= ans;
