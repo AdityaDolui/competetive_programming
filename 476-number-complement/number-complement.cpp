@@ -8,7 +8,7 @@ public:
         str2=str.substr(it);
         for(int i=0;i<str2.size();i++){
             if(str2[i]=='1')str2[i]='0';
-            else str2[i]='01';
+            else str2[i]='1';
         }
       
         return stoi(str2,nullptr,2);
