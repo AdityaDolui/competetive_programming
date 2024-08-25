@@ -1,33 +1,32 @@
 class Solution {
 public:
      bool check(string first,string second){
-        int i=0,j=0;
-        
+       int i=0,j=0;
+        int cnt=0;
         bool flag=0;
         int fnon=-1,snon=-1;
-     
-        while(i<first.length()){
+        unordered_map<char,int> s;
+        vector<bool> f(8,0);
+      
+        while(i<first.length() && j<second.length()){
             if(first[i]!=second[i]){
-                if(flag){
-                    if(second[i]==fnon && first[i]==snon){
-                        fnon=-1;
-                        snon=-1;
-                    }
-                    else{
-                        return false;
-                    }
-                }else{
-                    flag=1;
-                    fnon=first[i];
-                    snon=second[i];
-                }
+                f[i]=true;
+                s[second[i]]++;
             }
-           
             i++;
         }
-        if(fnon==-1) return true;
-        return false;
-       
+   
+       for(int i=0;i<8;i++){
+        if(f[i]){
+            char ch=first[i];
+            if(s[ch]<=0)return false;
+            s[ch]--;
+            cnt++;
+            if(cnt>2)return false;
+        }
+       }
+       if(!cnt || cnt==2)return true;
+       return false;
     }
     string constructs(string str,int val){
         string s="";
