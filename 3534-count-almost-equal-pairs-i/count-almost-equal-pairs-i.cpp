@@ -1,14 +1,13 @@
 class Solution {
 public:
      bool check(string first,string second){
-       int i=0,j=0;
+       int i=0;
         int cnt=0;
-        bool flag=0;
-        int fnon=-1,snon=-1;
+       
         unordered_map<char,int> s;
         vector<bool> f(8,0);
       
-        while(i<first.length() && j<second.length()){
+        while(i<first.length()){
             if(first[i]!=second[i]){
                 f[i]=true;
                 s[second[i]]++;
