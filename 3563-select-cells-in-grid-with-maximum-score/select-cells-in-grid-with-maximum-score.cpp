@@ -3,6 +3,8 @@ public:
     map<pair<int,int>,int> dp;
     int f(int i,int mask,vector<vector<int>>& arr){
         if(i>=arr.size())return 0;
+
+        
         if(dp[{i,mask}])return dp[{i,mask}];
         int ans=0;
         int row=arr[i][1];
