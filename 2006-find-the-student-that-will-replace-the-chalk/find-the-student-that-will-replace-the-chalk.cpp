@@ -6,7 +6,7 @@ public:
         int n=chalk.size();
         
        sum=accumulate(chalk.begin(),chalk.end(),0LL);
-       cout<<sum;
+
         k=k%sum;
         while(true){
             i=i%chalk.size();
