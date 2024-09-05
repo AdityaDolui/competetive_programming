@@ -5,13 +5,13 @@ public:
        int m=rolls.size();
        int totm=accumulate(rolls.begin(),rolls.end(),0);
     int total=mean*(m+n);
-    if(total-totm>(n*6) || total<totm)return {};
+    if(total-totm>(n*6) || total<totm+(n*1))return {};
     
     int rem=total-totm;
 
     int r=rem%n;
     int d=rem/n;
-    if(!d)return {};
+    //if(!d)return {};
     while(n--){
         if(r>0){
             r--;
