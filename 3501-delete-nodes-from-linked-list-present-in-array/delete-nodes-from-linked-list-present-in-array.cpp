@@ -24,7 +24,7 @@ public:
                // prev=prev->next;
 
             }else{
-                if(curr==prev && curr==head){
+                if(curr==prev){
                     head=head->next;
                      curr=curr->next;
                      prev=curr;
