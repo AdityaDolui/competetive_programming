@@ -15,13 +15,13 @@ public:
         ListNode *curr=head,* prev=head;
         unordered_set<int> set;
         for(auto it:nums)set.insert(it);
-    cout<<set.size()<<" ";
+    
         while(curr){
             cout<<curr->val;
             if(set.find(curr->val)==set.end()){
                 prev=curr;
                 curr=curr->next;
-               // prev=prev->next;
+              
 
             }else{
                 if(curr==prev){
