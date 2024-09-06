@@ -17,7 +17,7 @@ public:
         for(auto it:nums)set.insert(it);
     
         while(curr){
-            cout<<curr->val;
+            
             if(set.find(curr->val)==set.end()){
                 prev=curr;
                 curr=curr->next;
