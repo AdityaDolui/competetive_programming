@@ -21,6 +21,7 @@ public:
             if(set.find(curr->val)==set.end()){
                 prev=curr;
                 curr=curr->next;
+                
               
 
             }else{
