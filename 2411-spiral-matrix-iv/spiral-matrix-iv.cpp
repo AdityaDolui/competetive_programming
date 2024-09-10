@@ -22,7 +22,7 @@ public:
         int arrSize=arr.size();
         int top=0 ,botm=m-1,left=0, right=n-1;
         int k=0;
-        while (k<arrSize && top<=botm && left<=right){
+        while (k<arrSize ){
             cout<<"hi"<<" ";
             for(int i=left;i<=right&& k<arrSize;i++){
                 //cout<<"Sri ";
