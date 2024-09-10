@@ -17,9 +17,8 @@ public:
 
         while(curr){
             int num=gcd(curr->val,prev->val);
-            ListNode * temp=new ListNode(num);
+            ListNode * temp=new ListNode(num,curr);
             
-            temp->next=curr;
             prev->next=temp;
             prev=curr;
             curr=curr->next;
