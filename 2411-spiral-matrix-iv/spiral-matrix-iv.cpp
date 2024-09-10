@@ -11,28 +11,50 @@
 class Solution {
 public:
     vector<vector<int>> spiralMatrix(int m, int n, ListNode* head) {
-        vector<vector<int>> ans(m, vector<int>(n, -1));
-        const int layer=min((m+1)/2, (n+1)/2);
-        ListNode* curr=head;
-        for(int k=0; k<layer; k++){
-            for(int j=k; j<n-k; j++, curr=curr->next){//right
-                if (curr) ans[k][j]=curr->val;
-                else break;
-            }
-            for(int i=k+1; i<m-k; i++, curr=curr->next){//down
-                if (curr) ans[i][n-1-k]=curr->val;
-                else break;
-            }
-            for(int j=n-k-2; j>k; j--, curr=curr->next){//left
-                if (curr) ans[m-k-1][j]=curr->val;
-                else break;
-            }
-            for(int i=m-1-k; i>k; i--, curr=curr->next){//up
-                if (curr) ans[i][k]=curr->val;
-                else break;
-            }
-            if (!curr) break;
+        vector<int> arr;
+        vector<vector<int>> ans(m,vector<int>(n,-1));
+        ListNode * temp=head;
+        while(temp){
+            arr.push_back(temp->val);
+            temp=temp->next;
         }
-        return ans; 
+        for(auto it:arr)cout<<it<<" ";
+        int arrSize=arr.size();
+        int top=0 ,botm=m-1,left=0, right=n-1;
+        int k=0;
+        while (k<arrSize && top<=botm && left<=right){
+            cout<<"hi"<<" ";
+            for(int i=left;i<=right&& k<arrSize;i++){
+                //cout<<"Sri ";
+                int val=(k<arrSize)?arr[k]:-1;
+                cout<<val<<" ";
+                k++;
+                ans[top][i]=val;
+            }
+            top++;
+            for(int i=top;i<=botm && k<arrSize;i++){
+                int val=(k<arrSize)?arr[k]:-1;
+                k++;
+                ans[i][right]=val;
+            }
+            right--;
+          
+            for(int i=right;i>=left && k<arrSize;i--){
+                int val=(k<arrSize)?arr[k]:-1;
+                k++;
+                ans[botm][i]=val;
+            }
+            botm--;
+            cout<<"botm -"<<botm<<" top-"<<top;
+             for(int i=botm;i>=top && k<arrSize;i--){
+                cout<<"here ";
+                int val=(k<arrSize)?arr[k]:-1;
+                k++;
+                ans[i][left]=val;
+            }
+            left++;
+            
+        }
+        return ans;
     }
 };
