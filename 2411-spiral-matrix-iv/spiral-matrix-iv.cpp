@@ -18,16 +18,16 @@ public:
             arr.push_back(temp->val);
             temp=temp->next;
         }
-        for(auto it:arr)cout<<it<<" ";
+      
         int arrSize=arr.size();
         int top=0 ,botm=m-1,left=0, right=n-1;
         int k=0;
         while (k<arrSize ){
-            cout<<"hi"<<" ";
+          
             for(int i=left;i<=right&& k<arrSize;i++){
-                //cout<<"Sri ";
+             
                 int val=(k<arrSize)?arr[k]:-1;
-                cout<<val<<" ";
+            
                 k++;
                 ans[top][i]=val;
             }
@@ -45,9 +45,9 @@ public:
                 ans[botm][i]=val;
             }
             botm--;
-            cout<<"botm -"<<botm<<" top-"<<top;
+           
              for(int i=botm;i>=top && k<arrSize;i--){
-                cout<<"here ";
+               
                 int val=(k<arrSize)?arr[k]:-1;
                 k++;
                 ans[i][left]=val;
