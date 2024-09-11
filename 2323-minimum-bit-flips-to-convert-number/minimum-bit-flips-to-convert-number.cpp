@@ -1,15 +1,12 @@
 class Solution {
 public:
     int minBitFlips(int start, int goal) {
-        bitset<32>a(start);
-        bitset<32>b(goal);
-
-        string a1=a.to_string();
-        string b1=b.to_string();
+        string strt=bitset<32>(start).to_string();
+        string gl=bitset<32>(goal).to_string();
 
         int ans=0; 
-        for(int i=0;i<a1.size();i++){
-            if(a1[i]!=b1[i])ans++;
+        for(int i=0;i<strt.size();i++){
+            if(strt[i]!=gl[i])ans++;
         }
         return ans;
     }
