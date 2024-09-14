@@ -13,16 +13,8 @@ public:
             return true;
         }
         
-       // if(i<0 || i>=grid.size()|| j<0 || j>=grid[0].size()||vis[i][j]||health<=0)return false;
-        
         if(dp[i][j][health]!=-1)return dp[i][j][health];
        
-        
-       
-        
-       // vis[i][j]=true;
-        
-        
         int curr=grid[i][j];
         for(int k=0;k<=3;k++){
             int x=dx[k]+i;
@@ -44,8 +36,6 @@ public:
     bool findSafeWalk(vector<vector<int>>& grid, int health) {
         int m=grid[0].size();
         int n=grid.size();
-       // vector<vector<bool>> vis (n,vector<bool>(m,0));
-     
         vector<vector<vector<int>>> dp (n, vector<vector<int>>(m,vector<int>(health+1,-1)));
         return f(0,0,grid,health,dp);
        
