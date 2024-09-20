@@ -1,8 +1,9 @@
 class Solution {
 private:
-   
+   unordered_map<string,vector<int>> dp;
    vector<int> f(string str){
-    
+    if(dp.find(str)!=dp.end())return dp[str];
+
     vector<int> ans;
     for(int i=0;i<str.size();i++){
         if(str[i]=='-' || str[i]=='+' || str[i]=='*'){
@@ -25,7 +26,7 @@ private:
     if(ans.empty()){
         ans.push_back(stoi(str));
     }
-    return ans;
+    return dp[str]=ans;
    }
 public:
 
