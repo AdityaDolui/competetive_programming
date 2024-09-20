@@ -10,8 +10,8 @@ private:
         auto left =f(str.substr(0,i));
         auto right =f(str.substr(i+1));
         
-        for(auto l:left){
-            for(auto r:right){
+        for(auto &l:left){
+            for(auto &r:right){
                 if(str[i] == '+')
                             ans.push_back(l + r);
                         if(str[i] == '-')
