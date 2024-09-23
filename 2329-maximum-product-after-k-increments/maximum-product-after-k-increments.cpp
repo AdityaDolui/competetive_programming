@@ -17,6 +17,6 @@ int mod=1e9+7;
             ans=((pq.top()%mod)*ans)%mod;
             pq.pop();
         }
-        return ans;
+        return (int)ans;
     }
 };
