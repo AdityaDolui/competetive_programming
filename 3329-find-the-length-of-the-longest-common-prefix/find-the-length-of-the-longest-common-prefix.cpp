@@ -6,9 +6,6 @@ public:
     int longestCommonPrefix(vector<int>& arr1, vector<int>& arr2) {
         int ans=0;
 
-        // sort(arr1.begin(),arr1.end(),greater<int>());
-        // sort(arr2.begin(),arr2.end(),greater<int>());
-
     vector<string> str1;
     for(auto it:arr1)str1.push_back(to_string(it));
 
@@ -21,6 +18,7 @@ public:
             set.insert(ss);
         }
     }
+    
     vector<string> str2;
     for(auto it:arr2)str2.push_back(to_string(it));
 
