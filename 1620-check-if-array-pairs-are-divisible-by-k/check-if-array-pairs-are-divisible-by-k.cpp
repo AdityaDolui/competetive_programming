@@ -4,7 +4,7 @@ public:
         unordered_map<int,int> map;
         int cnt=0;
         for(auto it:arr){
-            it=((it%k)+k)%k;
+            it=((it%k)+k);
             if(it%k==0){
                 if(map[0]>0){
                     map[0]--;
