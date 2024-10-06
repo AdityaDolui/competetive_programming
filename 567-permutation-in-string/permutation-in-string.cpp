@@ -7,7 +7,7 @@ public:
         }
         int k=0;
         int l=0,h=0;
-       // map2[s2[0]]++;
+       
         while(h<s2.length()){
             map2[s2[h]]++;
             k++;
@@ -20,12 +20,7 @@ public:
                 k--;
             }
             if(map2==map)return true;
-        //      for(auto it:map2){
-        //     cout<<it.first<<" "<<it.second<<" || ";
-            
-        // }
-        // cout<<"**";
-         }
+        }
        
         return false;
     }
