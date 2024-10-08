@@ -3,9 +3,9 @@ public:
     int minLength(string s) {
         stack<int> st;
         for(auto it:s){
-            if(!st.empty()){
+        
             if(it=='D'){
-                if(st.top()=='C'){
+                if(!st.empty()  && st.top()=='C'){
                     st.pop();
                    
                 }else{
@@ -13,16 +13,13 @@ public:
                 }
             }
            else if(it=='B'){
-                if(st.top()=='A'){
+                if(!st.empty()  &&st.top()=='A'){
                     st.pop();
                 }else{
                     st.push(it);
                 }
             }
             else{
-                st.push(it);
-            }
-        } else{
                 st.push(it);
             }
         }
