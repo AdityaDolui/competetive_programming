@@ -3,7 +3,7 @@ class Solution {
         if(i>=nums.length){
             return target==1000?1:0;
         }
-      //  if(dp[i][target]!=1)return dp[i][target];
+        if(dp[i][target]!=-1)return dp[i][target];
          dp[i][target]= f(i+1,nums,target+nums[i],dp)+ f(i+1,nums,target-nums[i],dp);
          return dp[i][target];
     }
