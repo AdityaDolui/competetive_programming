@@ -32,18 +32,18 @@ class Solution {
 
            val=val%10;
 
-           // ans.val=val;
-            //if((l1!=null && l1.next!=null) || (l2!=null && l2.next!=null ) || inHand==true){
+            ans.val=val;
+            if((l1!=null ) || (l2!=null ) || inHand==true){
           
-            ListNode next=new ListNode(val);
+            ListNode next=new ListNode();
             ans.next=next;
            
-         //  }
+           }
           ans=ans.next;
 
         val=0;
         }
 
-        return temp.next;
+        return temp;
     }
 }
