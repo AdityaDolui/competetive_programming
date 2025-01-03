@@ -36,7 +36,7 @@ class Solution {
 
        return Arrays.stream(queries)
        .mapToInt(
-        arr -> arr[0]==0 ? pre[arr[1]] : pre[arr[1]]-pre[arr[0]-1]
+        arr ->{ return arr[0]==0 ? pre[arr[1]] : pre[arr[1]]-pre[arr[0]-1]; }
         
        ).toArray();
 
