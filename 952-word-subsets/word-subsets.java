@@ -39,17 +39,17 @@ class Solution {
 
 
     for(int i=0;i<words1.length;i++){
-      //  AtomicBoolean flag=new AtomicBoolean(true);
+       // AtomicBoolean flag=new AtomicBoolean(true);
 
         HashMap<Character, Integer> map =new HashMap<>(arr1.get(i));
 
-    //     map.forEach((key,value)->{
-    //         if(required.get(key)>value){
-    //             flag.set(false);
-    //             return;
-    //         }
-    //     });
-    //     if(flag.get()==true)ans.add(words1[i]);
+        // map.forEach((key,value)->{
+        //     if(required.getOrDefault(key,0)>value){
+        //         flag.set(false);
+        //         return;
+        //     }
+        // });
+        // if(flag.get()==true)ans.add(words1[i]);
 
                 final boolean[] flag = {true};  // Use an array to modify the flag inside forEach
 
