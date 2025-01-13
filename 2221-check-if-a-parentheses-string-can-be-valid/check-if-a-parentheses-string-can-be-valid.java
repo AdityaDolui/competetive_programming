@@ -20,7 +20,13 @@ class Solution {
         mini=Math.max(mini,0);
       
      }   
+    //  if( mini>0)return false;
+    //     maxi=Math.min(maxi,0);
+      
+    //  }   
        
-       return mini==0;
+    //    return maxi==0;
+       
+       return mini<=0;
     }
 }
