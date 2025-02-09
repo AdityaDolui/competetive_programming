@@ -3,8 +3,7 @@ class Solution {
         HashMap<Integer,Integer> map=new HashMap<>();
         long ans=0;
         int cnt=0;
-        int [] newArr=Arrays.stream(nums).toArray();
-        Arrays.sort(newArr);
+         
          map.put((nums[nums.length-1]-(nums.length-1)), 1);
         for(int i=nums.length-2;i>=0;i--){
              int match=map.getOrDefault((nums[i]-i),0);
