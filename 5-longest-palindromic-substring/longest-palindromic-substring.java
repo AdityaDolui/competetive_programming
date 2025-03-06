@@ -1,6 +1,6 @@
 class Solution {
-    public String longestPalindrome(String s) {
-        if (s.length()==1)return s;
+   public String longestPalindrome(String s) {
+		  if (s.length()==1)return s;
         int start=0,end=0,maxi=-1;
         String ans="";
         if(s.length()==2 && s.charAt(0)==s.charAt(1))return s;
@@ -32,5 +32,13 @@ class Solution {
             }
         }
         return ans;
-    }
+	}
+	private boolean isPalindrome(String s){
+        for(int left = 0 , right = s.length()-1 ; left < right ; left++, right--){
+            if(s.charAt(left) != s.charAt(right)){
+                return false;
+            }
+        }
+		return true;
+	}
 }
