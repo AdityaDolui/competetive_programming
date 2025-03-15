@@ -9,17 +9,16 @@ class Solution {
             count+=val/ans;
             if(count>=k)return true;
         }
-  
+
     
-       if(count>=k)return true;
-       else return false;
+        return false;
 
     }
     public int maximumCandies(int[] candies, long k) {
       
         int ans=0;
         System.out.println(Arrays.toString(candies));
-        int left=1,right=10000000;
+        int left=1,right=Arrays.stream(candies).max().orElse(0);
         while(left<=right){
             int mid=left+(right-left)/2;
             if(check(mid,candies,k)){
