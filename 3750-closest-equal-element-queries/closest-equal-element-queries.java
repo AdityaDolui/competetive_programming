@@ -48,12 +48,12 @@ class Solution {
                 l=pos-1;
                 leftValue=list.get(pos)-list.get(l);
             }
-        //     System.out.println(pos+" "+i+" "+leftValue+" "+rightValue);
+     
             ans.add(Math.min(leftValue,rightValue));
             }
         }
         
-        System.out.println(map);
+      
        return ans;
 }
 }
