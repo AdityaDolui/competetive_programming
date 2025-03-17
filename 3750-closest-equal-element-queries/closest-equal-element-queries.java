@@ -13,7 +13,6 @@ class Solution {
     public List<Integer> solveQueries(int[] nums, int[] queries) {
         Map<Integer,List<Integer>> map=new LinkedHashMap<>();
         for(int i=0;i<nums.length;i++){
-      //  //    map.put(nums[i],map.getOrDefault(nums[i],new ArrayList<>()).add(i));
         List<Integer> list=map.getOrDefault(nums[i],new ArrayList<>());
         list.add(i);
         map.put(nums[i],list);
@@ -26,12 +25,10 @@ class Solution {
             List<Integer> list=map.get(tar);
             if(list.size()==1){
                 ans.add(-1);
-               //continue;
-            }else{
+                continue;
+            }
             int pos=findValue(queries[i],list);
-            // System.out.println(pos+" "+i);
-
-          //  int rightValue=Math.abs(list.get((pos+1)%list.size())-list.get(pos));
+        
             int rightValue;
             if(pos==list.size()-1){
                  rightValue=nums.length-list.get(pos)+list.get((pos+1)%list.size());
@@ -50,7 +47,7 @@ class Solution {
             }
      
             ans.add(Math.min(leftValue,rightValue));
-            }
+            
         }
         
       
