@@ -11,7 +11,7 @@ class Solution {
         return -1;
     }
     public List<Integer> solveQueries(int[] nums, int[] queries) {
-        Map<Integer,List<Integer>> map=new TreeMap<>();
+        Map<Integer,List<Integer>> map=new LinkedHashMap<>();
         for(int i=0;i<nums.length;i++){
       //  //    map.put(nums[i],map.getOrDefault(nums[i],new ArrayList<>()).add(i));
         List<Integer> list=map.getOrDefault(nums[i],new ArrayList<>());
