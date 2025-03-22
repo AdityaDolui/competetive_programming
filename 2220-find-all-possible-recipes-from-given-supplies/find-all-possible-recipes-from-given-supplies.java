@@ -32,13 +32,14 @@ class Solution {
         ans.add(recipes[curr]);
         List<Integer> list=adj.getOrDefault(recipes[curr],new ArrayList<>());
        // System.out.println(String.valueOf(list));
-        for(Integer val:list){
-            dig[val]--;
-            if(dig[val]==0)q.add(val);
-        }
+        // for(Integer val:list){
+        //     dig[val]--;
+        //     if(dig[val]==0)q.add(val);
+        // }
+        list.forEach(val->{
+           if(--dig[val]==0)q.add(val);
+        });
     }
-
-        
 
         return ans;
     }
