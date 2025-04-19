@@ -4,7 +4,7 @@ public:
         long long ans=0;
 
         sort(nums.begin(),nums.end());
-        for(int i=0;i<nums.size()-1;i++){
+        for(int i=0;i<nums.size();i++){
             int it=nums[i];
            
             int a=lower_bound(nums.begin()+i+1,nums.end(),lower-it)-nums.begin();
