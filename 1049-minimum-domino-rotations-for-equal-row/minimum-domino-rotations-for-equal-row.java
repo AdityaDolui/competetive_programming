@@ -27,13 +27,7 @@ class Solution {
              ans= Math.min(ans,(tops.length-list2.size()));
 
          }
-        
-
       }
-
-    //   System.out.println(topMap);
-    //    System.out.println(bottomMap);
-   
       if(ans==Integer.MAX_VALUE)return -1;
       return ans;
 
