@@ -28,8 +28,8 @@ class Solution {
 
          }
       }
-      if(ans==Integer.MAX_VALUE)return -1;
-      return ans;
+     
+      return ans==Integer.MAX_VALUE?-1:ans;
 
     }
 }
