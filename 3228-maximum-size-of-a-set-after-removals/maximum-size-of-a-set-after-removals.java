@@ -17,11 +17,6 @@ class Solution {
        int val2=Math.min(list2.size()/2,(b-c));
        ans+=val2;
 
-     
-     
-    System.out.println(set1);
-    System.out.println(set2);
-    System.out.println(set3);
     ans+=Math.min((list1.size()/2-val1)+(list2.size()/2-val2),c);
     return ans;
 
