@@ -20,8 +20,8 @@ class Solution {
         if(left==-1)return -1;
         int right =check(node.right);
         if(right==-1)return -1;
-        if(Math.abs(right-left)>=2)return -1;
-        return Math.max(left,right)+1;
+         return Math.abs(right-left)>=2? -1:Math.max(left,right)+1;
+     
     }  
     public boolean isBalanced(TreeNode root) {
         return check(root)==-1?false:true;
