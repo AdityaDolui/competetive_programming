@@ -14,12 +14,13 @@ class Solution {
                 temp[i][j]=cnt;
             }
         }
+
        for (int i = 0; i < matrix.length; i++) {
 
             temp[i]=Arrays.stream(temp[i])
                             .boxed()
                             .sorted((a,b)->b-a)
-                            .mapToInt(a->a)
+                            .mapToInt(Integer::intValue)
                             .toArray();
 
        }
@@ -32,9 +33,7 @@ class Solution {
                 ans=Math.max(ans,temp[i][j]*(j+1));
             }
         }
-       for (int[] r : temp) {
-    System.out.println(Arrays.toString(r));
-}
+   
         return ans;
     }
 }
